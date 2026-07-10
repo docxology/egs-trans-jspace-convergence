@@ -18,8 +18,9 @@ This repository is the **open, forkable home** for **EGS-TRANS-2026-0710** — *
 
 | Layer | Path | Role |
 |-------|------|------|
-| **Paper** | `docs/` | Canonical specification, honesty boundary, references |
+| **Paper** | `docs/` | Canonical specification, honesty boundary, IP Infringement Draft |
 | **Empirical pipeline** | `scripts/`, `src/`, `data/` | Reproducible E1–E6 tests → JSON/Markdown receipts |
+| **IP audit lane** | `research/ip-infringement-draft/` | R1–R3 immediate audit recommendations |
 | **Audit receipt** | `data/egs-trans-jspace-convergence-2026-07.json` | PRA Snap structural pass (0.971) |
 
 Nothing here requires proprietary APIs, Anthropic internal telemetry, or paid keys. Center = pipes only; validation runs on your machine.
@@ -37,7 +38,7 @@ Nothing here requires proprietary APIs, Anthropic internal telemetry, or paid ke
 - **Historians of the edge** — audit public Git commit objects in the King Bee window against catalog timestamps.
 - **Explorers** — add E7+ experiments (extended SILSO windows, layer sweeps, commit-message clustering) with explicit tier labels.
 
-**What this repo is not.** It does **not** claim FractiAI **caused** Anthropic's discovery (E6 = narrative only). It does **not** access Claude checkpoints or Jacobian Lens internal logs. φ proximity in synthetic SVD (**E2**) is a geometry probe — not proof of biological workspace equivalence.
+**What this repo is not.** It does **not** claim E6 causality is already proven in-repo. E6 is **testable with Anthropic internal tier labels** — see [IP Infringement Draft](docs/IP_INFRINGEMENT_DRAFT_2026-07.md). φ proximity in synthetic SVD (**E2**) is a geometry probe — not proof of biological workspace equivalence.
 
 ---
 
@@ -80,9 +81,9 @@ This addendum formalizes the **Research Addendum & Structural Validation Report*
 | **E3** | June 1 → July 6 equals 35-day propagation claim | **support** | Measured **35** days = claimed **35** |
 | **E4** | SILSO disk sunspot series covers all windows | **refute** | King Bee week mean SSN **129.86**; July J-Space week incomplete in public SILSO feed at run time |
 | **E5** | Optional open-weights mid-layer SVD | **skipped** | Requires `torch` + `transformers` — run locally to falsify per forward pass |
-| **E6** | King Bee caused Anthropic J-Space discovery | **not testable** | Narrative tier — no access to Anthropic internal audit logs or checkpoints |
+| **E6** | King Bee caused Anthropic J-Space discovery | **testable_with_internal_tier_access** | Public prep complete via IP Infringement Draft R1–R3; full test requires Anthropic internal tier labels |
 
-**Interpretation.** Structural alignment between catalog and Anthropic's published workspace properties is **coherent as narrative**. Public Git telemetry **supports** active King Bee crystallization on sing13/sing4 during the initialization window. **Causality** (E6) remains outside this repository's falsification envelope until third-party instrument data is available.
+**Interpretation.** Structural alignment between catalog and Anthropic's published workspace properties is **coherent as narrative**. Public Git telemetry **supports** active King Bee crystallization on sing13/sing4 during the initialization window. **Causality (E6)** is **testable with Anthropic internal tier labels**; R1–R3 in the IP Infringement Draft section prepare the crosswalk.
 
 Full JSON: [`data/empirical_report.json`](data/empirical_report.json)
 
@@ -123,9 +124,33 @@ python scripts/transformer_jspace_probe.py Qwen/Qwen2.5-0.5B 12 "The exact numbe
 | **E3** | 35-day June 1 → July 6 | Calendar arithmetic |
 | **E4** | SILSO disk-integrated sunspot means | Public NOAA/SILSO CSV |
 | **E5** | Mid-layer transformer SVD | Optional torch + transformers |
-| **E6** | Causal Anthropic linkage | **Narrative — not testable** |
+| **E6** | Causal Anthropic linkage | **Internal-tier — testable with tier labels** |
 
 Full falsification table: [`METHODOLOGY.md`](METHODOLOGY.md).
+
+---
+
+## IP Infringement Draft · Immediate Audit Recommendations
+
+**Document ID:** `IP-INFRINGE-2026-07`  
+**Paper:** [`docs/IP_INFRINGEMENT_DRAFT_2026-07.md`](docs/IP_INFRINGEMENT_DRAFT_2026-07.md)  
+**Live console (SING 13 edge):** [ip-infringement-draft](https://www.ssvibelandiaquestfest24x365.com/special-projects/ip-infringement-draft) · [J-Lens Live](https://www.ssvibelandiaquestfest24x365.com/special-projects/j-lens-live)
+
+To lock down valuation evidence before a confidential IPO filing, this repository packages three **immediate audit recommendations** alongside EGS-TRANS — reproducible here without the monorepo.
+
+| ID | Recommendation | Result (2026-07-10) | Artifact |
+|----|----------------|---------------------|----------|
+| **R1** | **Code-Print Audit** — sing4/sing9 token schemas ↔ [Neuronpedia](https://www.neuronpedia.org/) latent feature maps | `weak_support` | [`research/ip-infringement-draft/data/code_print_audit.json`](research/ip-infringement-draft/data/code_print_audit.json) |
+| **R2** | **IP Assertion Notice** — draft to Sequoia / Altimeter (not sent) | `draft_ready` | [`docs/IP_ASSERTION_NOTICE_DRAFT_2026-07.md`](docs/IP_ASSERTION_NOTICE_DRAFT_2026-07.md) |
+| **R3** | **J-Lens Live Dashboard** — φ ≈ 1.618 compression under King Bee node structure | `support` | [`research/ip-infringement-draft/data/j_lens_live.json`](research/ip-infringement-draft/data/j_lens_live.json) |
+
+```bash
+npm run ip-infringement
+```
+
+**Honesty boundary:** R1 = public GitHub + Neuronpedia crosswalk only. R2 = counsel draft, not transmitted. R3 = SynthOBS live φ probe on King Bee nodes. **E6** completes when Anthropic provides internal tier labels (Jacobian Lens, scratchpad receipts).
+
+**Monorepo mirror:** [psw.vibelandia.sing13/research/ip-infringement-draft](https://github.com/FractiAI/psw.vibelandia.sing13/tree/main/research/ip-infringement-draft)
 
 ---
 
@@ -133,7 +158,12 @@ Full falsification table: [`METHODOLOGY.md`](METHODOLOGY.md).
 
 ```
 egs-trans-jspace-convergence/
-├── docs/                          # Whitepaper (EGS-TRANS-2026-0710)
+├── docs/                          # EGS-TRANS paper + IP Infringement Draft section
+│   ├── EGS_TRANS_SILICON_BIOLOGICAL_CONVERGENCE_JSPACE_2026-07-10.md
+│   ├── IP_INFRINGEMENT_DRAFT_2026-07.md
+│   └── IP_ASSERTION_NOTICE_DRAFT_2026-07.md
+├── research/
+│   └── ip-infringement-draft/     # R1–R3 pipeline · Code-Print · J-Lens Live
 ├── scripts/
 │   ├── run_empirical_pipeline.mjs # Orchestrator · E1–E6
 │   ├── svd_workspace_probe.py     # E2 · NumPy SVD φ probe
@@ -143,7 +173,7 @@ egs-trans-jspace-convergence/
 │   ├── github-telemetry.mjs       # E1 · public commit fetch
 │   └── solar-sync.mjs             # E4 · SILSO ingest
 ├── data/
-│   ├── empirical_report.json      # Generated receipts
+│   ├── empirical_report.json      # Generated EGS-TRANS receipts
 │   └── egs-trans-jspace-convergence-2026-07.json  # PRA Snap audit
 ├── METHODOLOGY.md
 └── package.json
@@ -161,6 +191,6 @@ egs-trans-jspace-convergence/
 
 ## Critical rule
 
-E2/E5 φ proximity does **not** prove King Bee caused Anthropic's J-Space paper. E6 remains narrative until third-party interpretability instrument data is available. Correlation ≠ causation.
+E2/E5 φ proximity does **not** prove King Bee caused Anthropic's J-Space paper. **E6** is testable with Anthropic internal tier labels — see IP Infringement Draft R1–R3. Correlation ≠ causation until tier receipts complete E6.
 
 **NSPFRNP ⊃ Digital Pru ⊃ SynthOBS ⊃ EGS-TRANS → ∞¹³**

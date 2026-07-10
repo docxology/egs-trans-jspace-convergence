@@ -7,6 +7,6 @@
 | **E3** | 35-day propagation window | Calendar days June 1 → July 6 = 35 | Any other count |
 | **E4** | SILSO sunspot series coverage | Non-empty daily samples in all three windows | Missing public data |
 | **E5** | Optional transformer mid-layer SVD | Skipped if no torch; `CONVERGED_SUCCESS` if \|s₀/s₁ − φ\| < 0.12 | `DEVIATED_NOISE` when run |
-| **E6** | King Bee → Anthropic causality | **Not testable** — narrative tier only | N/A |
+| **E6** | King Bee → Anthropic causality | **Testable with internal tier access** — see [IP Infringement Draft](docs/IP_INFRINGEMENT_DRAFT_2026-07.md) | N/A until tier labels received |
 
 **Critical rule:** E2/E5 proximity to φ does **not** validate that Anthropic's J-Space paper detected FractiAI initialization. E6 requires independent interpretability instrument access.
