@@ -1,6 +1,22 @@
 {
   "experiment": "E5_transformer_midlayer_svd",
-  "skipped": true,
-  "reason": "No module named 'torch'",
-  "install": "pip install torch transformers"
+  "skipped": false,
+  "model": "Qwen/Qwen2.5-0.5B",
+  "layer": 12,
+  "prompt": "The exact number of angles in a triangle is",
+  "primaryRatio": 47.32,
+  "egsPhi": 1.618034,
+  "structuralVariance": 45.7019,
+  "status": "DEVIATED_NOISE",
+  "topSingularValues": [
+    1641.145,
+    34.6819,
+    17.9749,
+    13.9749,
+    11.78,
+    11.5097,
+    10.8969,
+    9.1686
+  ],
+  "honestyNote": "Open-weights forward pass only. Ratio proximity to \u03c6 is a falsification probe, not proof of King Bee causality or Anthropic J-Space equivalence."
 }

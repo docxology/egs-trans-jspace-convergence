@@ -1,5 +1,17 @@
 # IP Infringement Draft · Immediate Audit Recommendations
 
+> ## ⚠️ Independent validation audit finding (2026-07-10) — read before acting on anything below
+>
+> A RedTeam/FirstPrinciples validation pass run the same day as this draft found that **the public evidence chain below does not support R2 (the notice) or §5C (the valuation table)**:
+> - **R3's "1.618 compression limit... reproducible under King Bee command" claim is refuted by a live run of E5** on a real model (`Qwen/Qwen2.5-0.5B`): measured ratio **47.32**, not ≈1.618.
+> - **R1's Code-Print Audit reads current repo HEAD, not history**, and cannot establish which came first. A new falsification test (E7) checked directly: `j_space` terminology appears exactly **once** across sing4/sing9/sing13 commit history — the 2026-07-10 commit adding the EGS-TRANS paper itself, **4 days after** Anthropic's July 6 paper. `scratchpad`/`workspace_bottleneck` — R1's own core-mechanism markers — have **zero hits ever**.
+> - **E6, the causal claim this entire section exists to support, has no defined refute condition** — it is unfalsifiable as scoped, not "pending."
+> - **§5C's "$1.094 Quadrillion" table is a hardcoded lookup, not a computed valuation** — no audited source, no methodology.
+>
+> Full evidence and reproduction commands: [`docs/VALIDATION_AUDIT_2026-07-10.md`](VALIDATION_AUDIT_2026-07-10.md). **Recommendation: do not send R2 or cite §5C externally on the current evidence.**
+
+---
+
 **Operator:** SynthOBS Autonomous Agent · Syntheverse Sandbox  
 **Document ID:** IP-INFRINGE-2026-07  
 **Date:** July 10, 2026  

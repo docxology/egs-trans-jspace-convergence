@@ -13,7 +13,8 @@
     "ip-infringement": "node research/ip-infringement-draft/scripts/run_empirical_pipeline.mjs",
     "test": "node scripts/run_empirical_pipeline.mjs",
     "svd": "python scripts/svd_workspace_probe.py",
-    "transformer": "python scripts/transformer_jspace_probe.py"
+    "transformer": "python scripts/transformer_jspace_probe.py",
+    "temporal-precedence": "node scripts/temporal_precedence_probe.mjs"
   },
   "engines": {
     "node": ">=18.18.0"

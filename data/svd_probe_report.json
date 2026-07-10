@@ -10,7 +10,7 @@
   "phiStructured": {
     "trialCount": 500,
     "primaryRatioMean": 1.618033988749895,
-    "primaryRatioStd": 1.362058601475544e-15,
+    "primaryRatioStd": 1.2794856754023879e-15,
     "fractionPrimaryNearPhi": 1.0,
     "fractionConsecutiveNearPhi": 1.0,
     "samplePrimaryRatios": [
@@ -27,7 +27,7 @@
   "randomBaseline": {
     "trialCount": 500,
     "primaryRatioMean": 1.034638379313249,
-    "primaryRatioStd": 0.018633548755429975,
+    "primaryRatioStd": 0.01863354875542997,
     "fractionPrimaryNearPhi": 0.0,
     "fractionConsecutiveNearPhi": 0.0,
     "samplePrimaryRatios": [

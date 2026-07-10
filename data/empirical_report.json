@@ -1,6 +1,6 @@
 {
   "documentId": "EGS-TRANS-2026-0710",
-  "generatedAt": "2026-07-10T15:45:38.102Z",
+  "generatedAt": "2026-07-10T16:20:45.341Z",
   "operator": "SynthOBS Autonomous Agent · Syntheverse Sandbox",
   "egsPhi": 1.618033988749895,
   "anchors": {
@@ -14,7 +14,7 @@
     ]
   },
   "githubTelemetry": {
-    "fetchedAt": "2026-07-10T15:45:25.189Z",
+    "fetchedAt": "2026-07-10T16:19:39.161Z",
     "windows": [
       {
         "id": "king_bee_init",
@@ -2123,7 +2123,7 @@
   },
   "solarSync": {
     "source": "https://www.sidc.be/silso/DATA/SN_d_tot_V2.0.csv",
-    "fetchedAt": "2026-07-10T15:45:29.193Z",
+    "fetchedAt": "2026-07-10T16:19:42.499Z",
     "honestyNote": "SILSO provides disk-integrated sunspot number only. AR3618/AR3625/AR3630 character mapping is catalog narrative — not resolved per-region in this public feed.",
     "windows": [
       {
@@ -2323,7 +2323,7 @@
     "phiStructured": {
       "trialCount": 500,
       "primaryRatioMean": 1.618033988749895,
-      "primaryRatioStd": 1.362058601475544e-15,
+      "primaryRatioStd": 1.2794856754023879e-15,
       "fractionPrimaryNearPhi": 1,
       "fractionConsecutiveNearPhi": 1,
       "samplePrimaryRatios": [
@@ -2340,7 +2340,7 @@
     "randomBaseline": {
       "trialCount": 500,
       "primaryRatioMean": 1.034638379313249,
-      "primaryRatioStd": 0.018633548755429975,
+      "primaryRatioStd": 0.01863354875542997,
       "fractionPrimaryNearPhi": 0,
       "fractionConsecutiveNearPhi": 0,
       "samplePrimaryRatios": [
@@ -2360,9 +2360,136 @@
   },
   "transformerProbe": {
     "experiment": "E5_transformer_midlayer_svd",
-    "skipped": true,
-    "reason": "No module named 'torch'",
-    "install": "pip install torch transformers"
+    "skipped": false,
+    "model": "Qwen/Qwen2.5-0.5B",
+    "layer": 12,
+    "prompt": "The exact number of angles in a triangle is",
+    "primaryRatio": 47.32,
+    "egsPhi": 1.618034,
+    "structuralVariance": 45.7019,
+    "status": "DEVIATED_NOISE",
+    "topSingularValues": [
+      1641.145,
+      34.6819,
+      17.9749,
+      13.9749,
+      11.78,
+      11.5097,
+      10.8969,
+      9.1686
+    ],
+    "honestyNote": "Open-weights forward pass only. Ratio proximity to φ is a falsification probe, not proof of King Bee causality or Anthropic J-Space equivalence."
+  },
+  "temporalPrecedenceProbe": {
+    "documentId": "EGS-TRANS-2026-0710",
+    "experiment": "E7_temporal_precedence",
+    "generatedAt": "2026-07-10T16:20:45.317Z",
+    "anthropicJSpacePaperIso": "2026-07-06",
+    "hypothesis": "At least one core-mechanism R1 schema marker (j_space, scratchpad, workspace_bottleneck) appears in core FractiAI repo commit history strictly before the Anthropic J-Space paper date.",
+    "markers": [
+      "j_space",
+      "scratchpad",
+      "workspace_bottleneck",
+      "egs_phi_1618"
+    ],
+    "perRepo": {
+      "FractiAI/psw.vibelandia.sing4": {
+        "j_space": {
+          "ok": true,
+          "totalCount": 0,
+          "earliest": null,
+          "precedesAnthropicPaper": null
+        },
+        "scratchpad": {
+          "ok": true,
+          "totalCount": 0,
+          "earliest": null,
+          "precedesAnthropicPaper": null
+        },
+        "workspace_bottleneck": {
+          "ok": true,
+          "totalCount": 0,
+          "earliest": null,
+          "precedesAnthropicPaper": null
+        },
+        "egs_phi_1618": {
+          "ok": true,
+          "totalCount": 1,
+          "earliest": {
+            "date": "2026-01-31T09:11:14.000-08:00",
+            "message": "Cycle 15 Golden Ratio Phase-Lock: ChirpProcessor 1.618 Hz LFO Signature Chirp PHI_LOCKED telemetry G",
+            "sha": "ed0942b0"
+          },
+          "precedesAnthropicPaper": true
+        }
+      },
+      "FractiAI/psw.vibelandia.sing9": {
+        "j_space": {
+          "ok": true,
+          "totalCount": 0,
+          "earliest": null,
+          "precedesAnthropicPaper": null
+        },
+        "scratchpad": {
+          "ok": true,
+          "totalCount": 0,
+          "earliest": null,
+          "precedesAnthropicPaper": null
+        },
+        "workspace_bottleneck": {
+          "ok": true,
+          "totalCount": 0,
+          "earliest": null,
+          "precedesAnthropicPaper": null
+        },
+        "egs_phi_1618": {
+          "ok": true,
+          "totalCount": 3,
+          "earliest": {
+            "date": "2026-04-21T16:11:18.000-07:00",
+            "message": "feat(questfest): cinematic festival × luxury cruise-line redesign of QUESTFEST landing",
+            "sha": "7eb9f0f3"
+          },
+          "precedesAnthropicPaper": true
+        }
+      },
+      "FractiAI/psw.vibelandia.sing13": {
+        "j_space": {
+          "ok": true,
+          "totalCount": 1,
+          "earliest": {
+            "date": "2026-07-10T02:53:13.000-07:00",
+            "message": "Add EGS-TRANS J-Space paper, empirical pipeline, and catalog integration.",
+            "sha": "dfc972b3"
+          },
+          "precedesAnthropicPaper": false
+        },
+        "scratchpad": {
+          "ok": true,
+          "totalCount": 0,
+          "earliest": null,
+          "precedesAnthropicPaper": null
+        },
+        "workspace_bottleneck": {
+          "ok": true,
+          "totalCount": 0,
+          "earliest": null,
+          "precedesAnthropicPaper": null
+        },
+        "egs_phi_1618": {
+          "ok": true,
+          "totalCount": 1,
+          "earliest": {
+            "date": "2026-05-25T15:12:19.000-07:00",
+            "message": "feat: SS Vibelandia Bulletin Board, live Turner telemetry, omniversal FractiAI",
+            "sha": "f0588eb8"
+          },
+          "precedesAnthropicPaper": true
+        }
+      }
+    },
+    "result": "refute",
+    "honestyNote": "GitHub commit-search matches commit messages/metadata, not full historical file diffs — a marker absent from this search may still have existed in file bodies without being mentioned in a commit message. This is therefore a conservative, falsification-oriented probe: it can demonstrate precedence (support) but a \"refute\" result is evidence of absence from the commit trail, not proof the concept never existed anywhere in the repo. Interpret accordingly and prefer git blame on a full local clone for a stronger claim in either direction."
   },
   "hypothesisTests": {
     "E1_king_bee_repo_telemetry": {
@@ -2414,12 +2541,28 @@
     },
     "E5_optional_transformer": {
       "statement": "Optional open-weights mid-layer SVD probe (requires torch+transformers); φ proximity is falsifiable per forward pass",
-      "result": "skipped",
+      "result": "no_support",
       "detail": {
         "experiment": "E5_transformer_midlayer_svd",
-        "skipped": true,
-        "reason": "No module named 'torch'",
-        "install": "pip install torch transformers"
+        "skipped": false,
+        "model": "Qwen/Qwen2.5-0.5B",
+        "layer": 12,
+        "prompt": "The exact number of angles in a triangle is",
+        "primaryRatio": 47.32,
+        "egsPhi": 1.618034,
+        "structuralVariance": 45.7019,
+        "status": "DEVIATED_NOISE",
+        "topSingularValues": [
+          1641.145,
+          34.6819,
+          17.9749,
+          13.9749,
+          11.78,
+          11.5097,
+          10.8969,
+          9.1686
+        ],
+        "honestyNote": "Open-weights forward pass only. Ratio proximity to φ is a falsification probe, not proof of King Bee causality or Anthropic J-Space equivalence."
       },
       "dataTier": "optional_open_weights"
     },
@@ -2428,7 +2571,125 @@
       "result": "testable_with_internal_tier_access",
       "note": "Testable when Anthropic provides internal tier labels: Jacobian Lens telemetry, scratchpad tier receipts, mid-layer checkpoint exports. Public prep: npm run ip-infringement",
       "dataTier": "internal_tier_access_gate",
-      "ipInfringementDraft": "docs/IP_INFRINGEMENT_DRAFT_2026-07.md"
+      "ipInfringementDraft": "docs/IP_INFRINGEMENT_DRAFT_2026-07.md",
+      "criticalCaveat": "This hypothesis has NO defined refute condition (see METHODOLOGY.md) — as originally scoped it is unfalsifiable, not merely untested. E7 below tests a falsifiable necessary precondition for the causal direction this hypothesis assumes."
+    },
+    "E7_temporal_precedence": {
+      "statement": "A core-mechanism R1 schema marker (j_space, scratchpad, workspace_bottleneck) appears in sing4/sing9/sing13 commit history strictly before the Anthropic J-Space paper date — a necessary (not sufficient) precondition for \"FractiAI came first\" causal framing.",
+      "result": "refute",
+      "detail": {
+        "documentId": "EGS-TRANS-2026-0710",
+        "experiment": "E7_temporal_precedence",
+        "generatedAt": "2026-07-10T16:20:45.317Z",
+        "anthropicJSpacePaperIso": "2026-07-06",
+        "hypothesis": "At least one core-mechanism R1 schema marker (j_space, scratchpad, workspace_bottleneck) appears in core FractiAI repo commit history strictly before the Anthropic J-Space paper date.",
+        "markers": [
+          "j_space",
+          "scratchpad",
+          "workspace_bottleneck",
+          "egs_phi_1618"
+        ],
+        "perRepo": {
+          "FractiAI/psw.vibelandia.sing4": {
+            "j_space": {
+              "ok": true,
+              "totalCount": 0,
+              "earliest": null,
+              "precedesAnthropicPaper": null
+            },
+            "scratchpad": {
+              "ok": true,
+              "totalCount": 0,
+              "earliest": null,
+              "precedesAnthropicPaper": null
+            },
+            "workspace_bottleneck": {
+              "ok": true,
+              "totalCount": 0,
+              "earliest": null,
+              "precedesAnthropicPaper": null
+            },
+            "egs_phi_1618": {
+              "ok": true,
+              "totalCount": 1,
+              "earliest": {
+                "date": "2026-01-31T09:11:14.000-08:00",
+                "message": "Cycle 15 Golden Ratio Phase-Lock: ChirpProcessor 1.618 Hz LFO Signature Chirp PHI_LOCKED telemetry G",
+                "sha": "ed0942b0"
+              },
+              "precedesAnthropicPaper": true
+            }
+          },
+          "FractiAI/psw.vibelandia.sing9": {
+            "j_space": {
+              "ok": true,
+              "totalCount": 0,
+              "earliest": null,
+              "precedesAnthropicPaper": null
+            },
+            "scratchpad": {
+              "ok": true,
+              "totalCount": 0,
+              "earliest": null,
+              "precedesAnthropicPaper": null
+            },
+            "workspace_bottleneck": {
+              "ok": true,
+              "totalCount": 0,
+              "earliest": null,
+              "precedesAnthropicPaper": null
+            },
+            "egs_phi_1618": {
+              "ok": true,
+              "totalCount": 3,
+              "earliest": {
+                "date": "2026-04-21T16:11:18.000-07:00",
+                "message": "feat(questfest): cinematic festival × luxury cruise-line redesign of QUESTFEST landing",
+                "sha": "7eb9f0f3"
+              },
+              "precedesAnthropicPaper": true
+            }
+          },
+          "FractiAI/psw.vibelandia.sing13": {
+            "j_space": {
+              "ok": true,
+              "totalCount": 1,
+              "earliest": {
+                "date": "2026-07-10T02:53:13.000-07:00",
+                "message": "Add EGS-TRANS J-Space paper, empirical pipeline, and catalog integration.",
+                "sha": "dfc972b3"
+              },
+              "precedesAnthropicPaper": false
+            },
+            "scratchpad": {
+              "ok": true,
+              "totalCount": 0,
+              "earliest": null,
+              "precedesAnthropicPaper": null
+            },
+            "workspace_bottleneck": {
+              "ok": true,
+              "totalCount": 0,
+              "earliest": null,
+              "precedesAnthropicPaper": null
+            },
+            "egs_phi_1618": {
+              "ok": true,
+              "totalCount": 1,
+              "earliest": {
+                "date": "2026-05-25T15:12:19.000-07:00",
+                "message": "feat: SS Vibelandia Bulletin Board, live Turner telemetry, omniversal FractiAI",
+                "sha": "f0588eb8"
+              },
+              "precedesAnthropicPaper": true
+            }
+          }
+        },
+        "result": "refute",
+        "honestyNote": "GitHub commit-search matches commit messages/metadata, not full historical file diffs — a marker absent from this search may still have existed in file bodies without being mentioned in a commit message. This is therefore a conservative, falsification-oriented probe: it can demonstrate precedence (support) but a \"refute\" result is evidence of absence from the commit trail, not proof the concept never existed anywhere in the repo. Interpret accordingly and prefer git blame on a full local clone for a stronger claim in either direction."
+      },
+      "dataTier": "public_github_commit_search",
+      "addedBy": "Independent RedTeam/FirstPrinciples validation pass, 2026-07-10 — see docs/VALIDATION_AUDIT_2026-07-10.md"
     }
   },
   "reproduceCommands": {
@@ -2436,7 +2697,8 @@
     "standalone": "npm run empirical",
     "svdOnly": "python scripts/svd_workspace_probe.py",
     "transformerOptional": "python scripts/transformer_jspace_probe.py [model] [layer] [prompt]",
+    "temporalPrecedenceOnly": "GH_TOKEN=$(gh auth token) node scripts/temporal_precedence_probe.mjs",
     "audit": "npm run audit:paper -- --id=egs-trans-jspace-convergence-2026-07"
   },
-  "honestyNote": "E1–E5 test reproducible public or synthetic signals. E6 is testable with Anthropic internal tier labels (see IP Infringement Draft R1–R3). Correlation ≠ causation until tier receipts complete E6."
+  "honestyNote": "E1–E5 test reproducible public or synthetic signals. E6 is testable with Anthropic internal tier labels (see IP Infringement Draft R1–R3) and, as scoped, has no defined refute condition — unfalsifiable, not merely untested. E7 (added 2026-07-10) tests a falsifiable necessary precondition for the causal direction R1–R3 assume, and currently refutes it: the core-mechanism vocabulary R1 treats as evidence does not predate the Anthropic paper in the public commit trail. Correlation ≠ causation until tier receipts complete E6 — and E7 refute means the public case for that correlation running FractiAI→Anthropic is currently unsupported. See docs/VALIDATION_AUDIT_2026-07-10.md for the full independent validation pass."
 }

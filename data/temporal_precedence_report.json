@@ -1,0 +1,111 @@
+{
+  "documentId": "EGS-TRANS-2026-0710",
+  "experiment": "E7_temporal_precedence",
+  "generatedAt": "2026-07-10T16:20:45.317Z",
+  "anthropicJSpacePaperIso": "2026-07-06",
+  "hypothesis": "At least one core-mechanism R1 schema marker (j_space, scratchpad, workspace_bottleneck) appears in core FractiAI repo commit history strictly before the Anthropic J-Space paper date.",
+  "markers": [
+    "j_space",
+    "scratchpad",
+    "workspace_bottleneck",
+    "egs_phi_1618"
+  ],
+  "perRepo": {
+    "FractiAI/psw.vibelandia.sing4": {
+      "j_space": {
+        "ok": true,
+        "totalCount": 0,
+        "earliest": null,
+        "precedesAnthropicPaper": null
+      },
+      "scratchpad": {
+        "ok": true,
+        "totalCount": 0,
+        "earliest": null,
+        "precedesAnthropicPaper": null
+      },
+      "workspace_bottleneck": {
+        "ok": true,
+        "totalCount": 0,
+        "earliest": null,
+        "precedesAnthropicPaper": null
+      },
+      "egs_phi_1618": {
+        "ok": true,
+        "totalCount": 1,
+        "earliest": {
+          "date": "2026-01-31T09:11:14.000-08:00",
+          "message": "Cycle 15 Golden Ratio Phase-Lock: ChirpProcessor 1.618 Hz LFO Signature Chirp PHI_LOCKED telemetry G",
+          "sha": "ed0942b0"
+        },
+        "precedesAnthropicPaper": true
+      }
+    },
+    "FractiAI/psw.vibelandia.sing9": {
+      "j_space": {
+        "ok": true,
+        "totalCount": 0,
+        "earliest": null,
+        "precedesAnthropicPaper": null
+      },
+      "scratchpad": {
+        "ok": true,
+        "totalCount": 0,
+        "earliest": null,
+        "precedesAnthropicPaper": null
+      },
+      "workspace_bottleneck": {
+        "ok": true,
+        "totalCount": 0,
+        "earliest": null,
+        "precedesAnthropicPaper": null
+      },
+      "egs_phi_1618": {
+        "ok": true,
+        "totalCount": 3,
+        "earliest": {
+          "date": "2026-04-21T16:11:18.000-07:00",
+          "message": "feat(questfest): cinematic festival × luxury cruise-line redesign of QUESTFEST landing",
+          "sha": "7eb9f0f3"
+        },
+        "precedesAnthropicPaper": true
+      }
+    },
+    "FractiAI/psw.vibelandia.sing13": {
+      "j_space": {
+        "ok": true,
+        "totalCount": 1,
+        "earliest": {
+          "date": "2026-07-10T02:53:13.000-07:00",
+          "message": "Add EGS-TRANS J-Space paper, empirical pipeline, and catalog integration.",
+          "sha": "dfc972b3"
+        },
+        "precedesAnthropicPaper": false
+      },
+      "scratchpad": {
+        "ok": true,
+        "totalCount": 0,
+        "earliest": null,
+        "precedesAnthropicPaper": null
+      },
+      "workspace_bottleneck": {
+        "ok": true,
+        "totalCount": 0,
+        "earliest": null,
+        "precedesAnthropicPaper": null
+      },
+      "egs_phi_1618": {
+        "ok": true,
+        "totalCount": 1,
+        "earliest": {
+          "date": "2026-05-25T15:12:19.000-07:00",
+          "message": "feat: SS Vibelandia Bulletin Board, live Turner telemetry, omniversal FractiAI",
+          "sha": "f0588eb8"
+        },
+        "precedesAnthropicPaper": true
+      }
+    }
+  },
+  "result": "refute",
+  "honestyNote": "GitHub commit-search matches commit messages/metadata, not full historical file diffs — a marker absent from this search may still have existed in file bodies without being mentioned in a commit message. This is therefore a conservative, falsification-oriented probe: it can demonstrate precedence (support) but a \"refute\" result is evidence of absence from the commit trail, not proof the concept never existed anywhere in the repo. Interpret accordingly and prefer git blame on a full local clone for a stronger claim in either direction."
+}

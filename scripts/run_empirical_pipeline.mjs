@@ -59,6 +59,20 @@ async function main() {
     transformerReport = { skipped: true, error: String(e.message || e) };
   }
 
+  let temporalPrecedenceReport = null;
+  try {
+    execSync(`node "${join(SCRIPTS, 'temporal_precedence_probe.mjs')}"`, {
+      stdio: 'inherit',
+      cwd: ROOT,
+    });
+    const { readFile } = await import('node:fs/promises');
+    temporalPrecedenceReport = JSON.parse(
+      await readFile(join(DATA, 'temporal_precedence_report.json'), 'utf8'),
+    );
+  } catch (e) {
+    temporalPrecedenceReport = { skipped: true, error: String(e.message || e) };
+  }
+
   const sing13Init = github.byRepo['FractiAI/psw.vibelandia.sing13']?.windows?.king_bee_init;
   const sing4Init = github.byRepo['FractiAI/psw.vibelandia.sing4']?.windows?.king_bee_init;
   const sing9Init = github.byRepo['FractiAI/psw.vibelandia.sing9']?.windows?.king_bee_init;
@@ -123,6 +137,18 @@ async function main() {
         'Testable when Anthropic provides internal tier labels: Jacobian Lens telemetry, scratchpad tier receipts, mid-layer checkpoint exports. Public prep: npm run ip-infringement',
       dataTier: 'internal_tier_access_gate',
       ipInfringementDraft: 'docs/IP_INFRINGEMENT_DRAFT_2026-07.md',
+      criticalCaveat:
+        'This hypothesis has NO defined refute condition (see METHODOLOGY.md) — as originally scoped it is unfalsifiable, not merely untested. E7 below tests a falsifiable necessary precondition for the causal direction this hypothesis assumes.',
+    },
+    E7_temporal_precedence: {
+      statement:
+        'A core-mechanism R1 schema marker (j_space, scratchpad, workspace_bottleneck) appears in ' +
+        'sing4/sing9/sing13 commit history strictly before the Anthropic J-Space paper date — a ' +
+        'necessary (not sufficient) precondition for "FractiAI came first" causal framing.',
+      result: temporalPrecedenceReport?.result || temporalPrecedenceReport?.skipped ? (temporalPrecedenceReport.result || 'skipped') : 'not_run',
+      detail: temporalPrecedenceReport,
+      dataTier: 'public_github_commit_search',
+      addedBy: 'Independent RedTeam/FirstPrinciples validation pass, 2026-07-10 — see docs/VALIDATION_AUDIT_2026-07-10.md',
     },
   };
 
@@ -141,16 +167,25 @@ async function main() {
     solarSync: solar,
     svdProbe: svdReport,
     transformerProbe: transformerReport,
+    temporalPrecedenceProbe: temporalPrecedenceReport,
     hypothesisTests,
     reproduceCommands: {
       monorepo: 'npm run research:egs-trans-jspace-convergence',
       standalone: 'npm run empirical',
       svdOnly: 'python scripts/svd_workspace_probe.py',
       transformerOptional: 'python scripts/transformer_jspace_probe.py [model] [layer] [prompt]',
+      temporalPrecedenceOnly: 'GH_TOKEN=$(gh auth token) node scripts/temporal_precedence_probe.mjs',
       audit: 'npm run audit:paper -- --id=egs-trans-jspace-convergence-2026-07',
     },
     honestyNote:
-      'E1–E5 test reproducible public or synthetic signals. E6 is testable with Anthropic internal tier labels (see IP Infringement Draft R1–R3). Correlation ≠ causation until tier receipts complete E6.',
+      'E1–E5 test reproducible public or synthetic signals. E6 is testable with Anthropic internal ' +
+      'tier labels (see IP Infringement Draft R1–R3) and, as scoped, has no defined refute condition — ' +
+      'unfalsifiable, not merely untested. E7 (added 2026-07-10) tests a falsifiable necessary ' +
+      'precondition for the causal direction R1–R3 assume, and currently refutes it: the core-mechanism ' +
+      'vocabulary R1 treats as evidence does not predate the Anthropic paper in the public commit trail. ' +
+      'Correlation ≠ causation until tier receipts complete E6 — and E7 refute means the public case for ' +
+      'that correlation running FractiAI→Anthropic is currently unsupported. See ' +
+      'docs/VALIDATION_AUDIT_2026-07-10.md for the full independent validation pass.',
   };
 
   const jsonPath = join(DATA, 'empirical_report.json');
