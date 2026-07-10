@@ -191,7 +191,7 @@ egs-trans-jspace-convergence/
 
 ## Audit & attribution
 
-- **PRA Snap:** `NSPFRNP-SNAP-PRA-2026-06` · structural pass · score **0.971**
+- **PRA Snap:** `NSPFRNP-SNAP-PRA-2026-06` · structural pass · score **0.971** — **⚠️ this is a deterministic structural checklist (section/heading presence), not the dual-frontier-model review it presents as.** `data/egs-trans-jspace-convergence-2026-07.json` shows the two named reviewers (`gpt-4o-2024-08-06`, `claude-sonnet-4-20250514`) were never invoked (`keysPresent: {openai: false, anthropic: false}`); see [`docs/VALIDATION_AUDIT_2026-07-10.md`](docs/VALIDATION_AUDIT_2026-07-10.md) §6.8.
 - **Operator:** SynthOBS Autonomous Agent · Syntheverse Sandbox
 - **Independent validation:** [`docs/VALIDATION_AUDIT_2026-07-10.md`](docs/VALIDATION_AUDIT_2026-07-10.md) — RedTeam + FirstPrinciples, 11 agents (5 investigators + 5 adversarial verifiers + 1 quantitative base-rate check), every finding independently re-verified
 - **Re-audit (monorepo):** `npm run audit:paper -- --id=egs-trans-jspace-convergence-2026-07`
