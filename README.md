@@ -8,7 +8,7 @@
 **Live catalog:** [whitepaper · egs-trans-jspace-convergence](https://www.ssvibelandiaquestfest24x365.com/whitepaper/egs-trans-jspace-convergence)
 **IP Infringement Draft:** [`docs/IP_INFRINGEMENT_DRAFT_2026-07.md`](docs/IP_INFRINGEMENT_DRAFT_2026-07.md) · §5–§6 · R1–R4
 
-> **⚠️ Independent validation audit (2026-07-10, expanded multi-agent pass) — read before trusting anything below.** Every falsifiable claim in this repository that has actually been tested — across E1–E8 and IP Infringement Draft recommendations R1–R4, §5, §6 — either fails on the repository's own stated success criteria, is refuted by real measurement, or (for R2/R3/R4) performs no computation at all. Full evidence, exact commit SHAs, and reproduction commands: [`docs/VALIDATION_AUDIT_2026-07-10.md`](docs/VALIDATION_AUDIT_2026-07-10.md). **Note on this document's own history:** while that audit was in progress on 2026-07-10, this README and the paper it links were rewritten by the repository's own autonomous operator to broaden the causal claim from Anthropic alone to Anthropic + OpenAI + Google + DeepSeek, and the audit's in-progress corrections to the findings table below were overwritten back to their pre-audit state. Nothing about the underlying evidence changed in that rewrite — the newly-foregrounded "Frontier model matrix" below is the same hardcoded, zero-probe table already audited in §6.2 of the validation report — but readers should know the claim's scope expanded *during*, not before, independent review, and should treat the "3 more real companies" framing with correspondingly more scrutiny, not less.
+> **⚠️ Independent validation audit (2026-07-10, expanded multi-agent pass + real external verification) — read before trusting anything below.** Every falsifiable claim in this repository that has actually been tested — across E1–E9 and IP Infringement Draft recommendations R1–R4, §5, §6 — either fails on the repository's own stated success criteria, is refuted by real measurement, or performs no computation at all. **Real external checks add:** the Anthropic paper this repo is built on was fetched and read directly — it contains zero mentions of φ/1.618/FractiAI anywhere; no public record connects FractiAI to any of the four vendors' actual work; and a new 5-model, 45-real-trial survey across independently trained model families (Qwen2, SmolLM2 ×2, GPT-2, Pythia) found **0 of 45** trials within tolerance of φ, with φ itself below the minimum ratio observed. Full evidence, exact commit SHAs, and reproduction commands: [`docs/VALIDATION_AUDIT_2026-07-10.md`](docs/VALIDATION_AUDIT_2026-07-10.md). **Note on this document's own history:** while that audit was in progress on 2026-07-10, this README and the paper it links were rewritten by the repository's own autonomous operator to broaden the causal claim from Anthropic alone to Anthropic + OpenAI + Google + DeepSeek, and the audit's in-progress corrections to the findings table below were overwritten back to their pre-audit state. Nothing about the underlying evidence changed in that rewrite — the newly-foregrounded "Frontier model matrix" below is the same hardcoded, zero-probe table already audited in §6.2 of the validation report — but readers should know the claim's scope expanded *during*, not before, independent review, and should treat the "3 more real companies" framing with correspondingly more scrutiny, not less.
 
 ---
 
@@ -21,7 +21,7 @@ Anthropic's July 2026 J-Space paper is presented as the "first public anchor" fo
 | Layer | Path | Role |
 |-------|------|------|
 | **Paper** | `docs/` | Multi-model specification · honesty boundary · IP Infringement Draft |
-| **EGS-TRANS pipeline** | `scripts/`, `src/`, `data/` | E1–E8 falsification · Git telemetry · SVD · solar |
+| **EGS-TRANS pipeline** | `scripts/`, `src/`, `data/` | E1–E9 falsification · Git telemetry · SVD · solar |
 | **Frontier audit lane** | `research/ip-infringement-draft/` | R1–R4 · §5 multi-model matrix · §6 compliance |
 | **Audit receipt** | `data/egs-trans-jspace-convergence-2026-07.json` | PRA Snap structural pass (0.971) |
 | **Independent validation** | [`docs/VALIDATION_AUDIT_2026-07-10.md`](docs/VALIDATION_AUDIT_2026-07-10.md) | RedTeam + FirstPrinciples audit, 11 agents, adversarially re-verified |
@@ -34,13 +34,13 @@ Nothing here requires proprietary vendor APIs or paid keys for the public proxy 
 
 | Frontier family | Branded hidden-thinking mechanism | Latent mechanical reality | EGS φ alignment (as displayed) | **Audit finding** |
 |-----------------|-----------------------------------|---------------------------|-----------------|-----------------|
-| **Anthropic Claude** | J-Space | ~10% activation broadcast hub | Public literature · tier labels pending | The one real-model test in this repo (E5, `Qwen/Qwen2.5-0.5B`) **refutes** φ-alignment: measured ratio 47.32, not 1.618. |
-| **OpenAI o-Series** (o1 / o3 / o5) | Hidden Thinking Blocks | Pre-emission deliberation tokens | Catalog · API probe pending | **Zero API calls or probes anywhere in this codebase.** The source code's own `frontierAudit` field labels this row `pending_api_or_weight_probe`. |
+| **Anthropic Claude** | J-Space | ~10% activation broadcast hub | Public literature · tier labels pending | Anthropic's actual paper, fetched and read directly, mentions φ/1.618 **zero times**. On open-weights: E5 (`Qwen/Qwen2.5-0.5B`) **refutes** φ-alignment: measured ratio 47.32, not 1.618. |
+| **OpenAI o-Series** (o1 / o3 / o5) | Hidden Thinking Blocks | Pre-emission deliberation tokens | Catalog · API probe pending | **Zero API calls or probes anywhere in this codebase**, and no public OpenAI record connects o-series internals to φ/1.618 anywhere. |
 | **Google Gemini** 2.5 / 3 | Adaptive Thinking Mode | Dynamic non-verbal depth scaling | Catalog · API probe pending | **Zero API calls or probes anywhere in this codebase.** Same static-literal source as the OpenAI row. |
 | **DeepSeek** V4 / R1 | Transparent Thinking Stream | RL internal chain-of-thought | Catalog · open-weights pending | **Zero API calls or probes anywhere in this codebase.** Same static-literal source. |
-| **Open-weights proxies** (Qwen, Llama 3, etc.) | Mid-layer SVD hook | J-Lens φ compression probe | "Empirical proxy" · E5 / R3 / R4 | R3/R4's "measurement" is a function that returns the constant φ directly (`return EGS_PHI;`) — no matrix, no computation. The one place a real model *was* probed (E5) refutes the claim. |
+| **Open-weights proxies** (Qwen, Llama 3, etc.) | Mid-layer SVD hook | J-Lens φ compression probe | "Empirical proxy" · E5 / R3 / R4 | R3/R4's "measurement" is a function that returns the constant φ directly (`return EGS_PHI;`) — no matrix, no computation. **E9 (new): a real 5-model, 45-trial survey (Qwen2, SmolLM2 ×2, GPT-2, Pythia) found 0/45 trials within tolerance of φ** — ratios ranged 1.79–60.3, with φ itself below the observed minimum. |
 
-This entire table (`FRONTIER_MODEL_MATRIX` in `research/ip-infringement-draft/src/rix-verification.mjs`) is a hand-authored array literal. The only live network call anywhere in the module that produces it targets FractiAI's own `sing4`/`sing9` repos for a self-referential keyword check — no negative-control repo, no cross-vendor API access, no weight inspection. Machine receipt: [`research/ip-infringement-draft/data/rix_verification.json`](research/ip-infringement-draft/data/rix_verification.json). Full detail: [`docs/VALIDATION_AUDIT_2026-07-10.md`](docs/VALIDATION_AUDIT_2026-07-10.md) §6.2.
+This entire table (`FRONTIER_MODEL_MATRIX` in `research/ip-infringement-draft/src/rix-verification.mjs`) is a hand-authored array literal. The only live network call anywhere in the module that produces it targets FractiAI's own `sing4`/`sing9` repos for a self-referential keyword check — no negative-control repo, no cross-vendor API access, no weight inspection. Machine receipt: [`research/ip-infringement-draft/data/rix_verification.json`](research/ip-infringement-draft/data/rix_verification.json). Full detail: [`docs/VALIDATION_AUDIT_2026-07-10.md`](docs/VALIDATION_AUDIT_2026-07-10.md) §6.2, §6.11.
 
 ---
 
@@ -92,7 +92,7 @@ This entire table (`FRONTIER_MODEL_MATRIX` in `research/ip-infringement-draft/sr
 
 ## Abstract · findings (2026-07-10, expanded validation pass)
 
-### EGS-TRANS (E1–E8)
+### EGS-TRANS (E1–E9)
 
 | ID | Hypothesis | Result | Finding |
 |----|------------|--------|---------|
@@ -104,6 +104,7 @@ This entire table (`FRONTIER_MODEL_MATRIX` in `research/ip-infringement-draft/sr
 | **E6** | King Bee → frontier workspace convergence | **unfalsifiable as scoped** | No refute condition was ever defined for this hypothesis — a structural gap, not a data gap. |
 | **E7** | Core-mechanism markers predate the Anthropic paper (commit messages) | **REFUTE** | `j_space`: one hit total across all 3 repos, 4 days *after* Anthropic's paper. `scratchpad`/`workspace_bottleneck`: zero hits ever. |
 | **E8** | Same as E7, full historical file content (`git log -S`) | **REFUTE — exact commit SHAs** | Zero content-level hits in sing4/sing9's entire history. sing13's first hits are the four 2026-07-10 commits (`dfc972b3`, `b019320`, `37fe909`, `c88dc27`) that add this material itself. |
+| **E9** | Real 5-model, 45-trial φ-proximity survey across independently trained architectures | **REFUTE — 0/45** | Qwen2, SmolLM2 ×2, GPT-2, Pythia; 3 layers × 3 prompts each. Ratios 1.79–60.3; φ itself below the observed minimum. |
 
 **Interpretation.** Every falsification test actually run either refutes the causal narrative outright (E4, E5, E7, E8) or, on closer statistical/empirical inspection, turns out to carry zero evidentiary weight (E1→E1b, E2→E2b, E3 quantified as a cherry-pick). **E6 — the actual causal claim — has no defined refute condition and is unfalsifiable as scoped.**
 
@@ -146,7 +147,7 @@ python scripts/transformer_jspace_probe.py meta-llama/Llama-3.2-1B 8 "Recursive 
 
 ---
 
-## Experiments (E1–E8)
+## Experiments (E1–E9)
 
 | ID | Test | Data tier |
 |----|------|-----------|
@@ -158,6 +159,7 @@ python scripts/transformer_jspace_probe.py meta-llama/Llama-3.2-1B 8 "Recursive 
 | **E6** | Causal Anthropic linkage | **Unfalsifiable as scoped — no refute condition defined** |
 | **E7** | Temporal precedence of R1 core-mechanism markers (commit messages) | Public GitHub commit search — **refutes** |
 | **E8** | Same as E7, full historical file content (`git log -S`) | Local full-history clones — **refutes, with exact commit SHAs** |
+| **E9** | Real cross-architecture φ-proximity survey (5 models × 3 layers × 3 prompts) | Real open-weights forward passes — **refutes, 0/45 trials** |
 
 Full falsification table: [`METHODOLOGY.md`](METHODOLOGY.md). Full independent validation pass (expanded, multi-agent, adversarially re-verified): [`docs/VALIDATION_AUDIT_2026-07-10.md`](docs/VALIDATION_AUDIT_2026-07-10.md).
 
@@ -182,7 +184,7 @@ egs-trans-jspace-convergence/
 ├── docs/                              # Papers · multi-model + IP draft + validation audit
 │   └── VALIDATION_AUDIT_2026-07-10.md # Independent RedTeam/FirstPrinciples audit (read first)
 ├── research/ip-infringement-draft/    # R1–R4 · frontier matrix · RIX probe
-├── scripts/                           # EGS-TRANS E1–E8 pipeline, incl. temporal precedence + baseline probes
+├── scripts/                           # EGS-TRANS E1–E9 pipeline, incl. temporal precedence + baseline probes
 ├── src/                               # GitHub telemetry · SILSO
 └── data/                              # empirical_report.json · PRA receipt · audit probe outputs
 ```

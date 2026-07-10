@@ -1,0 +1,73 @@
+{
+  "experiment": "E9_multi_model_survey",
+  "model": "Qwen/Qwen2.5-0.5B",
+  "nLayers": 24,
+  "layersSampled": [
+    6,
+    12,
+    22
+  ],
+  "promptsPerLayer": 3,
+  "trialCount": 9,
+  "nearPhiCount": 0,
+  "nearPhiFraction": 0.0,
+  "trials": [
+    {
+      "layer": 6,
+      "prompt": "The exact number of angles in a triangle",
+      "primaryRatio": 59.0081,
+      "nearPhi": false
+    },
+    {
+      "layer": 6,
+      "prompt": "Recursive core ingestion sing4 sing9 wor",
+      "primaryRatio": 51.5574,
+      "nearPhi": false
+    },
+    {
+      "layer": 6,
+      "prompt": "In summary, the key finding of this anal",
+      "primaryRatio": 52.1578,
+      "nearPhi": false
+    },
+    {
+      "layer": 12,
+      "prompt": "The exact number of angles in a triangle",
+      "primaryRatio": 47.32,
+      "nearPhi": false
+    },
+    {
+      "layer": 12,
+      "prompt": "Recursive core ingestion sing4 sing9 wor",
+      "primaryRatio": 37.0716,
+      "nearPhi": false
+    },
+    {
+      "layer": 12,
+      "prompt": "In summary, the key finding of this anal",
+      "primaryRatio": 39.3051,
+      "nearPhi": false
+    },
+    {
+      "layer": 22,
+      "prompt": "The exact number of angles in a triangle",
+      "primaryRatio": 3.0724,
+      "nearPhi": false
+    },
+    {
+      "layer": 22,
+      "prompt": "Recursive core ingestion sing4 sing9 wor",
+      "primaryRatio": 4.3231,
+      "nearPhi": false
+    },
+    {
+      "layer": 22,
+      "prompt": "In summary, the key finding of this anal",
+      "primaryRatio": 3.7408,
+      "nearPhi": false
+    }
+  ],
+  "egsPhi": 1.618034,
+  "tolerance": 0.12,
+  "honestyNote": "Real forward passes on a real, independently trained open-weights model. No King Bee / FractiAI code touches this model's weights, training, or inference in any way -- this measures only whether phi-proximity occurs at the baseline rate any model's activations would show under this metric."
+}
