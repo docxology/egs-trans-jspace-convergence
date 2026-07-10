@@ -1,6 +1,6 @@
 {
   "documentId": "EGS-TRANS-2026-0710",
-  "generatedAt": "2026-07-10T16:55:32.462Z",
+  "generatedAt": "2026-07-10T17:19:24.802Z",
   "operator": "SynthOBS Autonomous Agent · Syntheverse Sandbox",
   "egsPhi": 1.618033988749895,
   "anchors": {
@@ -14,7 +14,7 @@
     ]
   },
   "githubTelemetry": {
-    "fetchedAt": "2026-07-10T16:54:17.975Z",
+    "fetchedAt": "2026-07-10T17:18:26.296Z",
     "windows": [
       {
         "id": "king_bee_init",
@@ -2123,7 +2123,7 @@
   },
   "solarSync": {
     "source": "https://www.sidc.be/silso/DATA/SN_d_tot_V2.0.csv",
-    "fetchedAt": "2026-07-10T16:54:20.481Z",
+    "fetchedAt": "2026-07-10T17:18:29.538Z",
     "honestyNote": "SILSO provides disk-integrated sunspot number only. AR3618/AR3625/AR3630 character mapping is catalog narrative — not resolved per-region in this public feed.",
     "windows": [
       {
@@ -2383,7 +2383,7 @@
   "temporalPrecedenceProbe": {
     "documentId": "EGS-TRANS-2026-0710",
     "experiment": "E7_temporal_precedence",
-    "generatedAt": "2026-07-10T16:55:19.977Z",
+    "generatedAt": "2026-07-10T17:19:14.004Z",
     "anthropicJSpacePaperIso": "2026-07-06",
     "hypothesis": "At least one core-mechanism R1 schema marker (j_space, scratchpad, workspace_bottleneck) appears in core FractiAI repo commit history strictly before the Anthropic J-Space paper date.",
     "markers": [
@@ -2494,7 +2494,7 @@
   "e1BaselineProbe": {
     "documentId": "EGS-TRANS-2026-0710",
     "experiment": "E1b_baseline_control",
-    "generatedAt": "2026-07-10T16:55:29.556Z",
+    "generatedAt": "2026-07-10T17:19:23.811Z",
     "hypothesis": "King Bee window (2026-05-31--2026-06-02) commit activity is anomalous relative to each core repo's own baseline cadence over the preceding 30 days (|z| > 2).",
     "controlDays": 30,
     "perRepo": {
@@ -2648,7 +2648,7 @@
       "detail": {
         "documentId": "EGS-TRANS-2026-0710",
         "experiment": "E1b_baseline_control",
-        "generatedAt": "2026-07-10T16:55:29.556Z",
+        "generatedAt": "2026-07-10T17:19:23.811Z",
         "hypothesis": "King Bee window (2026-05-31--2026-06-02) commit activity is anomalous relative to each core repo's own baseline cadence over the preceding 30 days (|z| > 2).",
         "controlDays": 30,
         "perRepo": {
@@ -2842,7 +2842,7 @@
       "detail": {
         "documentId": "EGS-TRANS-2026-0710",
         "experiment": "E7_temporal_precedence",
-        "generatedAt": "2026-07-10T16:55:19.977Z",
+        "generatedAt": "2026-07-10T17:19:14.004Z",
         "anthropicJSpacePaperIso": "2026-07-06",
         "hypothesis": "At least one core-mechanism R1 schema marker (j_space, scratchpad, workspace_bottleneck) appears in core FractiAI repo commit history strictly before the Anthropic J-Space paper date.",
         "markers": [

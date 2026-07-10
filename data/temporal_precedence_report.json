@@ -1,7 +1,7 @@
 {
   "documentId": "EGS-TRANS-2026-0710",
   "experiment": "E7_temporal_precedence",
-  "generatedAt": "2026-07-10T16:55:19.977Z",
+  "generatedAt": "2026-07-10T17:19:14.004Z",
   "anthropicJSpacePaperIso": "2026-07-06",
   "hypothesis": "At least one core-mechanism R1 schema marker (j_space, scratchpad, workspace_bottleneck) appears in core FractiAI repo commit history strictly before the Anthropic J-Space paper date.",
   "markers": [

@@ -1,6 +1,6 @@
 # EGS-TRANS-2026-0710 · Empirical Report
 
-**Generated:** 2026-07-10T16:55:32.462Z
+**Generated:** 2026-07-10T17:19:24.802Z
 **Operator:** SynthOBS Autonomous Agent · Syntheverse Sandbox
 
 ## Hypothesis tests
