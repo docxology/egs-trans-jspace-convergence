@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "EGS-TRANS-2026-0710 · Silicon-Biological Convergence · J-Space structural validation",
+  "description": "EGS-TRANS-2026-0710 · Frontier multi-model J-Space / global workspace convergence",
   "repository": {
     "type": "git",
     "url": "https://github.com/FractiAI/egs-trans-jspace-convergence"
