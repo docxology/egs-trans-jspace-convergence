@@ -1,0 +1,100 @@
+{
+  "documentId": "EGS-TRANS-2026-0710",
+  "experiment": "E8_content_precedence_deep",
+  "anthropicJSpacePaperIso": "2026-07-06",
+  "method": "git log --all -S<term> (pickaxe: full historical file-content diff search, not commit messages)",
+  "results": {
+    "psw.vibelandia.sing4": {
+      "scratchpad": {
+        "totalCommitsTouchingTerm": 0,
+        "earliestSha": null,
+        "earliestDate": null,
+        "earliestMessage": null,
+        "precedesAnthropicPaper": null
+      },
+      "workspace bottleneck": {
+        "totalCommitsTouchingTerm": 0,
+        "earliestSha": null,
+        "earliestDate": null,
+        "earliestMessage": null,
+        "precedesAnthropicPaper": null
+      },
+      "J-Space": {
+        "totalCommitsTouchingTerm": 0,
+        "earliestSha": null,
+        "earliestDate": null,
+        "earliestMessage": null,
+        "precedesAnthropicPaper": null
+      },
+      "j-space": {
+        "totalCommitsTouchingTerm": 0,
+        "earliestSha": null,
+        "earliestDate": null,
+        "earliestMessage": null,
+        "precedesAnthropicPaper": null
+      }
+    },
+    "psw.vibelandia.sing9": {
+      "scratchpad": {
+        "totalCommitsTouchingTerm": 0,
+        "earliestSha": null,
+        "earliestDate": null,
+        "earliestMessage": null,
+        "precedesAnthropicPaper": null
+      },
+      "workspace bottleneck": {
+        "totalCommitsTouchingTerm": 0,
+        "earliestSha": null,
+        "earliestDate": null,
+        "earliestMessage": null,
+        "precedesAnthropicPaper": null
+      },
+      "J-Space": {
+        "totalCommitsTouchingTerm": 0,
+        "earliestSha": null,
+        "earliestDate": null,
+        "earliestMessage": null,
+        "precedesAnthropicPaper": null
+      },
+      "j-space": {
+        "totalCommitsTouchingTerm": 0,
+        "earliestSha": null,
+        "earliestDate": null,
+        "earliestMessage": null,
+        "precedesAnthropicPaper": null
+      }
+    },
+    "psw.vibelandia.sing13": {
+      "scratchpad": {
+        "totalCommitsTouchingTerm": 3,
+        "earliestSha": "b0193201",
+        "earliestDate": "2026-07-10",
+        "earliestMessage": "Add IP Infringement Draft audit lane and relabel E6 as internal-tier testable.",
+        "precedesAnthropicPaper": false
+      },
+      "workspace bottleneck": {
+        "totalCommitsTouchingTerm": 2,
+        "earliestSha": "b0193201",
+        "earliestDate": "2026-07-10",
+        "earliestMessage": "Add IP Infringement Draft audit lane and relabel E6 as internal-tier testable.",
+        "precedesAnthropicPaper": false
+      },
+      "J-Space": {
+        "totalCommitsTouchingTerm": 5,
+        "earliestSha": "dfc972b3",
+        "earliestDate": "2026-07-10",
+        "earliestMessage": "Add EGS-TRANS J-Space paper, empirical pipeline, and catalog integration.",
+        "precedesAnthropicPaper": false
+      },
+      "j-space": {
+        "totalCommitsTouchingTerm": 1,
+        "earliestSha": "b0193201",
+        "earliestDate": "2026-07-10",
+        "earliestMessage": "Add IP Infringement Draft audit lane and relabel E6 as internal-tier testable.",
+        "precedesAnthropicPaper": false
+      }
+    }
+  },
+  "result": "refute",
+  "honestyNote": "Full-history content-level pickaxe search, superseding E7's commit-message-only search. Requires local clones of sing4/sing9/sing13 (~900MB combined) -- run manually, not part of the default pipeline. See docs/VALIDATION_AUDIT_2026-07-10.md for interpretation."
+}

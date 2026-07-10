@@ -103,7 +103,9 @@ This entire table (`FRONTIER_MODEL_MATRIX` in `research/ip-infringement-draft/sr
 | **E5** | Open-weights mid-layer SVD | **REFUTE — the only real-model test in this repo** | `Qwen/Qwen2.5-0.5B` layer 12: ratio **47.32** vs claimed φ ≈ 1.618 (deviation 45.7), `DEVIATED_NOISE`. |
 | **E6** | King Bee → frontier workspace convergence | **unfalsifiable as scoped** | No refute condition was ever defined for this hypothesis — a structural gap, not a data gap. |
 | **E7** | Core-mechanism markers predate the Anthropic paper (commit messages) | **REFUTE** | `j_space`: one hit total across all 3 repos, 4 days *after* Anthropic's paper. `scratchpad`/`workspace_bottleneck`: zero hits ever. |
-| **E8** | Same as E7, full historical file content (`git log -S`) | **REFUTE — exact commit SHAs** | Zero content-level hits in sing4/sing9's entire history. sing13's first hits are the four 2026-07-10 commits that add this material itself. |
+| **E8** | Same as E7, full historical file content (`git log -S`) | **REFUTE — exact commit SHAs** | Zero content-level hits in sing4/sing9's entire history. sing13's first hits are the four 2026-07-10 commits (`dfc972b3`, `b019320`, `37fe909`, `c88dc27`) that add this material itself. |
+
+**Interpretation.** Every falsification test actually run either refutes the causal narrative outright (E4, E5, E7, E8) or, on closer statistical/empirical inspection, turns out to carry zero evidentiary weight (E1→E1b, E2→E2b, E3 quantified as a cherry-pick). **E6 — the actual causal claim — has no defined refute condition and is unfalsifiable as scoped.**
 
 ### IP Infringement Draft (R1–R4 · §5–§6) — audited
 
@@ -150,7 +152,7 @@ python scripts/transformer_jspace_probe.py meta-llama/Llama-3.2-1B 8 "Recursive 
 |----|------|-----------|
 | **E1** / **E1b** | King Bee window GitHub commits / statistical baseline control | Public GitHub REST API — **E1b refutes** (z-scores within ±0.7 of baseline) |
 | **E2** / **E2b** | SVD φ-decay vs random baseline / generalization to other constants | NumPy synthetic matrices — **E2b confirms tautology** (6/6 substitute constants pass identically) |
-| **E3** | 35-day June 1 → July 6 | Calendar arithmetic — quantified as a cherry-pick |
+| **E3** | 35-day June 1 → July 6 | Calendar arithmetic — quantified as a cherry-pick (see audit §6.6) |
 | **E4** | SILSO disk-integrated sunspot means | Public NOAA/SILSO CSV — **refutes** |
 | **E5** | Mid-layer transformer SVD | Open weights — **run, refutes** (the only real-model test in the repo) |
 | **E6** | Causal Anthropic linkage | **Unfalsifiable as scoped — no refute condition defined** |
@@ -163,7 +165,7 @@ Full falsification table: [`METHODOLOGY.md`](METHODOLOGY.md). Full independent v
 
 ## IP Infringement Draft · §5–§6
 
-> **⚠️ Validation audit: every recommendation in this section fails independent review.** See the table above and [`docs/VALIDATION_AUDIT_2026-07-10.md`](docs/VALIDATION_AUDIT_2026-07-10.md) for full detail on R1–R4, §5, and §6. **Do not send R2, and do not cite §5's valuation table or §6 externally, on current evidence.**
+> **⚠️ 2026-07-10 validation audit (expanded pass): every recommendation below fails independent review.** R1's actual receipt is a negative result on its own terms (only FractiAI's own branding self-matched across sing4/sing9; the markers that would matter — `scratchpad`, `workspace_bottleneck`, `mid_layer`, `selectivity` — never fired anywhere, ever). R3's "1.618 compression" dashboard performs no computation — it returns a hardcoded constant, not a measurement. R4 inherits that same defect and its cross-vendor rows are 100% hardcoded literals with zero probes. R2's notice is gated on nothing (`draft_ready` is unconditional). §6 cites a real case (*Jacobsen v. Katzer*) for a fact pattern it doesn't fit — no LICENSE file exists in sing4, sing9, or sing13. E5 and E8 (both run for real) refute the underlying geometric and temporal-precedence claims outright; E6 has no defined refute condition. **Do not send R2, and do not cite §5's valuation table or §6 externally, on current evidence.** Full detail, independently re-verified finding-by-finding: [`docs/VALIDATION_AUDIT_2026-07-10.md`](docs/VALIDATION_AUDIT_2026-07-10.md).
 
 **Paper:** [`docs/IP_INFRINGEMENT_DRAFT_2026-07.md`](docs/IP_INFRINGEMENT_DRAFT_2026-07.md)
 **Live console:** [ip-infringement-draft](https://www.ssvibelandiaquestfest24x365.com/special-projects/ip-infringement-draft) · [J-Lens Live](https://www.ssvibelandiaquestfest24x365.com/special-projects/j-lens-live)

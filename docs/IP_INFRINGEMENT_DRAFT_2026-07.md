@@ -1,14 +1,18 @@
 # IP Infringement Draft · Immediate Audit Recommendations
 
-> ## ⚠️ Independent validation audit finding (2026-07-10) — read before acting on anything below
+> ## ⚠️ Independent validation audit finding (2026-07-10, expanded multi-agent pass) — read before acting on anything below
 >
-> A RedTeam/FirstPrinciples validation pass run the same day as this draft found that **the public evidence chain below does not support R2 (the notice) or §5C (the valuation table)**:
-> - **R3's "1.618 compression limit... reproducible under King Bee command" claim is refuted by a live run of E5** on a real model (`Qwen/Qwen2.5-0.5B`): measured ratio **47.32**, not ≈1.618.
-> - **R1's Code-Print Audit reads current repo HEAD, not history**, and cannot establish which came first. A new falsification test (E7) checked directly: `j_space` terminology appears exactly **once** across sing4/sing9/sing13 commit history — the 2026-07-10 commit adding the EGS-TRANS paper itself, **4 days after** Anthropic's July 6 paper. `scratchpad`/`workspace_bottleneck` — R1's own core-mechanism markers — have **zero hits ever**.
-> - **E6, the causal claim this entire section exists to support, has no defined refute condition** — it is unfalsifiable as scoped, not "pending."
-> - **§5C's "$1.094 Quadrillion" table is a hardcoded lookup, not a computed valuation** — no audited source, no methodology.
+> A RedTeam/FirstPrinciples validation pass, expanded via 11 independent investigator/verifier agents with adversarial re-verification of every finding, found that **every recommendation in this section fails on its own stated evidence standard — R1 through R4, §5, and §6**:
 >
-> Full evidence and reproduction commands: [`docs/VALIDATION_AUDIT_2026-07-10.md`](VALIDATION_AUDIT_2026-07-10.md). **Recommendation: do not send R2 or cite §5C externally on the current evidence.**
+> - **R1's actual stored receipt (`code_print_audit.json`) is a negative result on its own thresholds**, not a generous "weak support." Only 2 of 6 schema markers ever matched anything in sing4/sing9 — `nodal_lattice` and `egs_phi` — and both are FractiAI's own branding found self-referentially in FractiAI's own documents. The markers that would indicate a genuine shared mechanism — `scratchpad`, `workspace_bottleneck`, `mid_layer`, `selectivity` — **never matched, in either repo, in any file, ever**. The Neuronpedia half of the "crosswalk" queries **Google's Gemma-2**, not any Anthropic model — this instrument cannot produce evidence about Anthropic even in principle.
+> - **R3's "1.618 compression limit... reproducible under King Bee command" claim performs no measurement at all.** `phiStructuredRatio()` in `j-lens-live.mjs` is literally `return EGS_PHI;` — no matrix, no input, no computation — called 120 times and averaged with itself. Independently re-verified by executing it directly: deterministically identical output every run. Where the one real open-weights probe in this repo *was* actually run (E5, `Qwen/Qwen2.5-0.5B`): ratio **47.32**, not ≈1.618 — refuted, and never propagated back into this dashboard's stored result.
+> - **R4 "Universal RIX Verification" inherits R3's tautology directly** (`kingBeeRootAuthority` is computed from R3's already-guaranteed-true output) and its OpenAI/Google/DeepSeek "catalog confirmed" rows are 100% hardcoded literals — the code's own `frontierAudit` field admits `pending_api_or_weight_probe` for three of the four rows in the same object that labels them "confirmed."
+> - **R2's draft notice is gated on nothing.** `getIpAssertionNoticeDraft()`'s only computation is a timestamp; `result: 'draft_ready'` is unconditional and does not read R1's actual `weak_support` result, R3's tautological claim, or E6's `pending_partner_tier_labels` status before marking itself ready.
+> - **§6's copyright/license theory has no factual predicate.** No `LICENSE` file exists in sing4, sing9, or sing13 (confirmed via full clones). *Jacobsen v. Katzer* requires an actual license, an alleged act of copying, and an established licensor–licensee relationship — none present here.
+> - **E6, the causal claim this entire section exists to support, has no defined refute condition** — unfalsifiable as scoped, not "pending." **E8** (full-history content search, stronger than the commit-message-only E7) refutes the temporal-precedence precondition with exact commit SHAs: `scratchpad`/`workspace_bottleneck`/`J-Space` have zero hits anywhere in sing4/sing9's history; sing13's first hits are the four 2026-07-10 commits that add this material, four days after Anthropic's paper.
+> - **§5C's "$1.094 Quadrillion" table is a hardcoded lookup, not a computed valuation.**
+>
+> Full evidence, exact commit SHAs, and reproduction commands: [`docs/VALIDATION_AUDIT_2026-07-10.md`](VALIDATION_AUDIT_2026-07-10.md). **Recommendation: do not send R2, and do not cite §5C or §6 externally, on the current evidence.**
 
 ---
 

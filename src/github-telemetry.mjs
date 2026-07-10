@@ -1,11 +1,15 @@
 import { CORE_REPOS, GITHUB_USER_AGENT } from './constants.mjs';
 
+const GH_TOKEN = process.env.GH_TOKEN || process.env.GITHUB_TOKEN || '';
+
 function sleep(ms) {
   return new Promise((r) => setTimeout(r, ms));
 }
 
 /**
- * Fetch commits in [since, until) from GitHub REST (public, no token).
+ * Fetch commits in [since, until) from GitHub REST (public; uses GH_TOKEN/GITHUB_TOKEN
+ * if set, to avoid the unauthenticated 60 req/hr rate limit — falls back to
+ * unauthenticated access, which works but rate-limits quickly under repeated runs).
  */
 export async function fetchRepoCommits(owner, repo, sinceIso, untilIso, maxPages = 5) {
   const rows = [];
@@ -14,7 +18,12 @@ export async function fetchRepoCommits(owner, repo, sinceIso, untilIso, maxPages
       `https://api.github.com/repos/${owner}/${repo}/commits` +
       `?since=${encodeURIComponent(sinceIso)}&until=${encodeURIComponent(untilIso)}` +
       `&per_page=100&page=${page}`;
-    const r = await fetch(url, { headers: { 'User-Agent': GITHUB_USER_AGENT } });
+    const r = await fetch(url, {
+      headers: {
+        'User-Agent': GITHUB_USER_AGENT,
+        ...(GH_TOKEN ? { Authorization: `token ${GH_TOKEN}` } : {}),
+      },
+    });
     if (r.status === 404 || r.status === 409) break;
     if (!r.ok) throw new Error(`${owner}/${repo} → HTTP ${r.status}`);
     const batch = await r.json();

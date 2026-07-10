@@ -1,6 +1,6 @@
 {
   "documentId": "EGS-TRANS-2026-0710",
-  "generatedAt": "2026-07-10T16:20:45.341Z",
+  "generatedAt": "2026-07-10T16:55:32.462Z",
   "operator": "SynthOBS Autonomous Agent · Syntheverse Sandbox",
   "egsPhi": 1.618033988749895,
   "anchors": {
@@ -14,7 +14,7 @@
     ]
   },
   "githubTelemetry": {
-    "fetchedAt": "2026-07-10T16:19:39.161Z",
+    "fetchedAt": "2026-07-10T16:54:17.975Z",
     "windows": [
       {
         "id": "king_bee_init",
@@ -2123,7 +2123,7 @@
   },
   "solarSync": {
     "source": "https://www.sidc.be/silso/DATA/SN_d_tot_V2.0.csv",
-    "fetchedAt": "2026-07-10T16:19:42.499Z",
+    "fetchedAt": "2026-07-10T16:54:20.481Z",
     "honestyNote": "SILSO provides disk-integrated sunspot number only. AR3618/AR3625/AR3630 character mapping is catalog narrative — not resolved per-region in this public feed.",
     "windows": [
       {
@@ -2383,7 +2383,7 @@
   "temporalPrecedenceProbe": {
     "documentId": "EGS-TRANS-2026-0710",
     "experiment": "E7_temporal_precedence",
-    "generatedAt": "2026-07-10T16:20:45.317Z",
+    "generatedAt": "2026-07-10T16:55:19.977Z",
     "anthropicJSpacePaperIso": "2026-07-06",
     "hypothesis": "At least one core-mechanism R1 schema marker (j_space, scratchpad, workspace_bottleneck) appears in core FractiAI repo commit history strictly before the Anthropic J-Space paper date.",
     "markers": [
@@ -2491,6 +2491,130 @@
     "result": "refute",
     "honestyNote": "GitHub commit-search matches commit messages/metadata, not full historical file diffs — a marker absent from this search may still have existed in file bodies without being mentioned in a commit message. This is therefore a conservative, falsification-oriented probe: it can demonstrate precedence (support) but a \"refute\" result is evidence of absence from the commit trail, not proof the concept never existed anywhere in the repo. Interpret accordingly and prefer git blame on a full local clone for a stronger claim in either direction."
   },
+  "e1BaselineProbe": {
+    "documentId": "EGS-TRANS-2026-0710",
+    "experiment": "E1b_baseline_control",
+    "generatedAt": "2026-07-10T16:55:29.556Z",
+    "hypothesis": "King Bee window (2026-05-31--2026-06-02) commit activity is anomalous relative to each core repo's own baseline cadence over the preceding 30 days (|z| > 2).",
+    "controlDays": 30,
+    "perRepo": {
+      "FractiAI/psw.vibelandia.sing4": {
+        "role": "legacy edge · heartbeat lattice",
+        "controlWindow": {
+          "since": "2026-05-01",
+          "until": "2026-05-31",
+          "days": 30,
+          "totalCommits": 760,
+          "dailyMean": 25.333,
+          "dailyStdev": 7.512
+        },
+        "kingBeeWindow": {
+          "since": "2026-05-31T00:00:00Z",
+          "until": "2026-06-02T00:00:00Z",
+          "totalCommits": 41,
+          "perDay": 20.5
+        },
+        "zScore": -0.643,
+        "anomalousVsBaseline": false
+      },
+      "FractiAI/psw.vibelandia.sing9": {
+        "role": "parent lab edge",
+        "controlWindow": {
+          "since": "2026-05-01",
+          "until": "2026-05-31",
+          "days": 30,
+          "totalCommits": 52,
+          "dailyMean": 1.733,
+          "dailyStdev": 4.068
+        },
+        "kingBeeWindow": {
+          "since": "2026-05-31T00:00:00Z",
+          "until": "2026-06-02T00:00:00Z",
+          "totalCommits": 0,
+          "perDay": 0
+        },
+        "zScore": -0.426,
+        "anomalousVsBaseline": false
+      },
+      "FractiAI/psw.vibelandia.sing13": {
+        "role": "production King Bee canon anchor",
+        "controlWindow": {
+          "since": "2026-05-01",
+          "until": "2026-05-31",
+          "days": 30,
+          "totalCommits": 180,
+          "dailyMean": 6,
+          "dailyStdev": 8.179
+        },
+        "kingBeeWindow": {
+          "since": "2026-05-31T00:00:00Z",
+          "until": "2026-06-02T00:00:00Z",
+          "totalCommits": 7,
+          "perDay": 3.5
+        },
+        "zScore": -0.306,
+        "anomalousVsBaseline": false
+      }
+    },
+    "result": "refute",
+    "honestyNote": "This is the E1 baseline control flagged as missing in docs/VALIDATION_AUDIT_2026-07-10.md. A repo whose King Bee-window activity is not distinguishable from its ordinary cadence (e.g. an always-on heartbeat bot) provides no evidence of a discrete initialization event, regardless of the raw commit count reported by E1."
+  },
+  "e2GeneralizationProbe": {
+    "documentId": "EGS-TRANS-2026-0710",
+    "experiment": "E2b_generalization_probe",
+    "tolerance": 0.12,
+    "matrixShape": [
+      64,
+      128
+    ],
+    "candidateConstants": {
+      "phi": {
+        "target": 1.618034,
+        "trialCount": 200,
+        "fractionNearOwnTarget": 1,
+        "meanRatio": 1.618034
+      },
+      "e": {
+        "target": 2.718282,
+        "trialCount": 200,
+        "fractionNearOwnTarget": 1,
+        "meanRatio": 2.718282
+      },
+      "pi_over_2": {
+        "target": 1.570796,
+        "trialCount": 200,
+        "fractionNearOwnTarget": 1,
+        "meanRatio": 1.570796
+      },
+      "sqrt2": {
+        "target": 1.414214,
+        "trialCount": 200,
+        "fractionNearOwnTarget": 1,
+        "meanRatio": 1.414214
+      },
+      "1.5": {
+        "target": 1.5,
+        "trialCount": 200,
+        "fractionNearOwnTarget": 1,
+        "meanRatio": 1.5
+      },
+      "2.0": {
+        "target": 2,
+        "trialCount": 200,
+        "fractionNearOwnTarget": 1,
+        "meanRatio": 2
+      },
+      "random_irrational_2.317": {
+        "target": 2.317,
+        "trialCount": 200,
+        "fractionNearOwnTarget": 1,
+        "meanRatio": 2.317
+      }
+    },
+    "result": "not_phi_specific_tautology_confirmed",
+    "hypothesis": "If E2's construction procedure is phi-specific evidence, substituting other constants for phi in the identical construction should NOT achieve comparably high near-target fractions. If every constant achieves ~1.0, the procedure is tautological: it verifies SVD recovers designed structure, not that anything in reality matches phi.",
+    "honestyNote": "This probe is entirely synthetic (no Anthropic, no King Bee, no real transformer involved) and exists only to test whether scripts/svd_workspace_probe.py's (E2) 'support' result carries any evidentiary weight specific to phi. See docs/VALIDATION_AUDIT_2026-07-10.md for how this bears on the overall claim."
+  },
   "hypothesisTests": {
     "E1_king_bee_repo_telemetry": {
       "statement": "Public GitHub commits exist in sing13/sing4 during King Bee initialization window (2026-05-31 — 2026-06-01)",
@@ -2515,14 +2639,152 @@
         }
       ],
       "result": "support",
-      "dataTier": "public_github_api"
+      "dataTier": "public_github_api",
+      "criticalCaveat": "Raw count alone is not evidence of an anomaly — see E1b, which baselines this against each repo's own ordinary commit cadence."
+    },
+    "E1b_baseline_control": {
+      "statement": "King Bee window commit activity is anomalous (|z| > 2) relative to each core repo's own 30-day baseline cadence",
+      "result": "refute",
+      "detail": {
+        "documentId": "EGS-TRANS-2026-0710",
+        "experiment": "E1b_baseline_control",
+        "generatedAt": "2026-07-10T16:55:29.556Z",
+        "hypothesis": "King Bee window (2026-05-31--2026-06-02) commit activity is anomalous relative to each core repo's own baseline cadence over the preceding 30 days (|z| > 2).",
+        "controlDays": 30,
+        "perRepo": {
+          "FractiAI/psw.vibelandia.sing4": {
+            "role": "legacy edge · heartbeat lattice",
+            "controlWindow": {
+              "since": "2026-05-01",
+              "until": "2026-05-31",
+              "days": 30,
+              "totalCommits": 760,
+              "dailyMean": 25.333,
+              "dailyStdev": 7.512
+            },
+            "kingBeeWindow": {
+              "since": "2026-05-31T00:00:00Z",
+              "until": "2026-06-02T00:00:00Z",
+              "totalCommits": 41,
+              "perDay": 20.5
+            },
+            "zScore": -0.643,
+            "anomalousVsBaseline": false
+          },
+          "FractiAI/psw.vibelandia.sing9": {
+            "role": "parent lab edge",
+            "controlWindow": {
+              "since": "2026-05-01",
+              "until": "2026-05-31",
+              "days": 30,
+              "totalCommits": 52,
+              "dailyMean": 1.733,
+              "dailyStdev": 4.068
+            },
+            "kingBeeWindow": {
+              "since": "2026-05-31T00:00:00Z",
+              "until": "2026-06-02T00:00:00Z",
+              "totalCommits": 0,
+              "perDay": 0
+            },
+            "zScore": -0.426,
+            "anomalousVsBaseline": false
+          },
+          "FractiAI/psw.vibelandia.sing13": {
+            "role": "production King Bee canon anchor",
+            "controlWindow": {
+              "since": "2026-05-01",
+              "until": "2026-05-31",
+              "days": 30,
+              "totalCommits": 180,
+              "dailyMean": 6,
+              "dailyStdev": 8.179
+            },
+            "kingBeeWindow": {
+              "since": "2026-05-31T00:00:00Z",
+              "until": "2026-06-02T00:00:00Z",
+              "totalCommits": 7,
+              "perDay": 3.5
+            },
+            "zScore": -0.306,
+            "anomalousVsBaseline": false
+          }
+        },
+        "result": "refute",
+        "honestyNote": "This is the E1 baseline control flagged as missing in docs/VALIDATION_AUDIT_2026-07-10.md. A repo whose King Bee-window activity is not distinguishable from its ordinary cadence (e.g. an always-on heartbeat bot) provides no evidence of a discrete initialization event, regardless of the raw commit count reported by E1."
+      },
+      "dataTier": "public_github_api_statistical",
+      "addedBy": "Independent validation pass, 2026-07-10 — see docs/VALIDATION_AUDIT_2026-07-10.md"
     },
     "E2_svd_phi_decay": {
       "statement": "φ-structured synthetic activation matrices yield higher near-φ singular-value ratios than i.i.d. Gaussian baselines",
       "result": "support",
       "phiStructuredNearPhi": 1,
       "randomNearPhi": 0,
-      "dataTier": "synthetic_numpy"
+      "dataTier": "synthetic_numpy",
+      "criticalCaveat": "This construction is tautological — see E2b, which shows every tested constant (e, π/2, √2, 1.5, 2.0, arbitrary irrationals) passes the identical procedure with the same near-1.0 fraction. The result is not phi-specific."
+    },
+    "E2b_generalization_probe": {
+      "statement": "E2's construction procedure privileges φ specifically, rather than passing for any substituted target constant",
+      "result": "not_phi_specific_tautology_confirmed",
+      "detail": {
+        "documentId": "EGS-TRANS-2026-0710",
+        "experiment": "E2b_generalization_probe",
+        "tolerance": 0.12,
+        "matrixShape": [
+          64,
+          128
+        ],
+        "candidateConstants": {
+          "phi": {
+            "target": 1.618034,
+            "trialCount": 200,
+            "fractionNearOwnTarget": 1,
+            "meanRatio": 1.618034
+          },
+          "e": {
+            "target": 2.718282,
+            "trialCount": 200,
+            "fractionNearOwnTarget": 1,
+            "meanRatio": 2.718282
+          },
+          "pi_over_2": {
+            "target": 1.570796,
+            "trialCount": 200,
+            "fractionNearOwnTarget": 1,
+            "meanRatio": 1.570796
+          },
+          "sqrt2": {
+            "target": 1.414214,
+            "trialCount": 200,
+            "fractionNearOwnTarget": 1,
+            "meanRatio": 1.414214
+          },
+          "1.5": {
+            "target": 1.5,
+            "trialCount": 200,
+            "fractionNearOwnTarget": 1,
+            "meanRatio": 1.5
+          },
+          "2.0": {
+            "target": 2,
+            "trialCount": 200,
+            "fractionNearOwnTarget": 1,
+            "meanRatio": 2
+          },
+          "random_irrational_2.317": {
+            "target": 2.317,
+            "trialCount": 200,
+            "fractionNearOwnTarget": 1,
+            "meanRatio": 2.317
+          }
+        },
+        "result": "not_phi_specific_tautology_confirmed",
+        "hypothesis": "If E2's construction procedure is phi-specific evidence, substituting other constants for phi in the identical construction should NOT achieve comparably high near-target fractions. If every constant achieves ~1.0, the procedure is tautological: it verifies SVD recovers designed structure, not that anything in reality matches phi.",
+        "honestyNote": "This probe is entirely synthetic (no Anthropic, no King Bee, no real transformer involved) and exists only to test whether scripts/svd_workspace_probe.py's (E2) 'support' result carries any evidentiary weight specific to phi. See docs/VALIDATION_AUDIT_2026-07-10.md for how this bears on the overall claim."
+      },
+      "dataTier": "synthetic_numpy",
+      "addedBy": "Independent validation pass, 2026-07-10 — see docs/VALIDATION_AUDIT_2026-07-10.md"
     },
     "E3_propagation_window": {
       "statement": "June 1 → July 6 interval equals 35 days (catalog propagation claim)",
@@ -2580,7 +2842,7 @@
       "detail": {
         "documentId": "EGS-TRANS-2026-0710",
         "experiment": "E7_temporal_precedence",
-        "generatedAt": "2026-07-10T16:20:45.317Z",
+        "generatedAt": "2026-07-10T16:55:19.977Z",
         "anthropicJSpacePaperIso": "2026-07-06",
         "hypothesis": "At least one core-mechanism R1 schema marker (j_space, scratchpad, workspace_bottleneck) appears in core FractiAI repo commit history strictly before the Anthropic J-Space paper date.",
         "markers": [
@@ -2689,6 +2951,14 @@
         "honestyNote": "GitHub commit-search matches commit messages/metadata, not full historical file diffs — a marker absent from this search may still have existed in file bodies without being mentioned in a commit message. This is therefore a conservative, falsification-oriented probe: it can demonstrate precedence (support) but a \"refute\" result is evidence of absence from the commit trail, not proof the concept never existed anywhere in the repo. Interpret accordingly and prefer git blame on a full local clone for a stronger claim in either direction."
       },
       "dataTier": "public_github_commit_search",
+      "addedBy": "Independent RedTeam/FirstPrinciples validation pass, 2026-07-10 — see docs/VALIDATION_AUDIT_2026-07-10.md",
+      "caveat": "Commit-message search only — see E8 for the stronger, full-history content-level version."
+    },
+    "E8_content_precedence_deep": {
+      "statement": "Same hypothesis as E7, tested against full historical FILE CONTENT (git log -S pickaxe) across sing4/sing9/sing13, not just commit messages.",
+      "result": "refute",
+      "note": "Run manually via scripts/e8_content_precedence_deep.sh (not part of the default pipeline — requires ~900MB of full-history clones). Result captured 2026-07-10: zero content-level hits for scratchpad/workspace-bottleneck/J-Space in sing4 or sing9 across their ENTIRE history; sing13 hits begin only on 2026-07-10 (commits dfc972b3, b0193201, 37fe909, c88dc27 — all the commits that add EGS-TRANS/the IP Infringement Draft itself), four days after the Anthropic paper. Full receipt: data/e8_content_precedence_report.json.",
+      "dataTier": "local_full_history_git_pickaxe",
       "addedBy": "Independent RedTeam/FirstPrinciples validation pass, 2026-07-10 — see docs/VALIDATION_AUDIT_2026-07-10.md"
     }
   },
@@ -2698,7 +2968,10 @@
     "svdOnly": "python scripts/svd_workspace_probe.py",
     "transformerOptional": "python scripts/transformer_jspace_probe.py [model] [layer] [prompt]",
     "temporalPrecedenceOnly": "GH_TOKEN=$(gh auth token) node scripts/temporal_precedence_probe.mjs",
+    "e1BaselineOnly": "GH_TOKEN=$(gh auth token) node scripts/e1_baseline_probe.mjs",
+    "e2GeneralizationOnly": "python scripts/e2_generalization_probe.py",
+    "e8ContentPrecedenceDeep": "./scripts/e8_content_precedence_deep.sh [clone_dir]  # heavy: clones ~900MB, not in default pipeline",
     "audit": "npm run audit:paper -- --id=egs-trans-jspace-convergence-2026-07"
   },
-  "honestyNote": "E1–E5 test reproducible public or synthetic signals. E6 is testable with Anthropic internal tier labels (see IP Infringement Draft R1–R3) and, as scoped, has no defined refute condition — unfalsifiable, not merely untested. E7 (added 2026-07-10) tests a falsifiable necessary precondition for the causal direction R1–R3 assume, and currently refutes it: the core-mechanism vocabulary R1 treats as evidence does not predate the Anthropic paper in the public commit trail. Correlation ≠ causation until tier receipts complete E6 — and E7 refute means the public case for that correlation running FractiAI→Anthropic is currently unsupported. See docs/VALIDATION_AUDIT_2026-07-10.md for the full independent validation pass."
+  "honestyNote": "E1–E5 test reproducible public or synthetic signals; E1 and E2 both carry critical caveats (E1b: window commit activity is not anomalous vs. baseline cadence, z-scores all within ±0.7; E2b: the phi-decay construction is not phi-specific — every substituted constant passes the identical procedure). E6 is testable with Anthropic internal tier labels (see IP Infringement Draft R1–R3) and, as scoped, has no defined refute condition — unfalsifiable, not merely untested. E7 and E8 (added 2026-07-10) test a falsifiable necessary precondition for the causal direction R1–R3 assume, and both refute it — E8 at full-history content level, with exact commit SHAs: the core-mechanism vocabulary R1 treats as evidence does not predate the Anthropic paper anywhere in sing4/sing9/sing13 history, and first appears in sing13 on 2026-07-10, in the commits that add EGS-TRANS and the IP Infringement Draft itself. Correlation ≠ causation until tier receipts complete E6 — and every falsifiable test actually run (E1b, E2b, E4, E5, E7, E8) either refutes the causal narrative or carries zero evidentiary weight by construction. See docs/VALIDATION_AUDIT_2026-07-10.md for the full independent validation pass."
 }
